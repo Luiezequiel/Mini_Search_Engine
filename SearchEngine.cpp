@@ -3,7 +3,9 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include <regex>
+#include <queue>
+#include <string>
+#include <vector>
 
 namespace fs = std::filesystem;
 
@@ -98,26 +100,25 @@ void SearchEngine::search(const std::string& query) {
     displayTopResult(results);
 }
 
-void SearchEngine::displayTopResult(const std::vector<std::pair<std::string,int>>& result) {
-    if (result.empty()) {
-        std::cout << "No se encontraron archivos relevantes.\n";
+
+void SearchEngine::displayTopResult(const std::vector<std::pair<std::string,int>>& results) {
+    if (results.empty()) {
+        std::cout << "No se encontraron resultados.\n";
         return;
     }
 
-    // priority_queue para top 3
-    auto cmp = [](const std::pair<std::string,int>& a, const std::pair<std::string,int>& b){
-        return a.second < b.second; // mayor frecuencia primero
-    };
-    std::priority_queue<std::pair<std::string,int>,
-                        std::vector<std::pair<std::string,int>>,
-                        decltype(cmp)> pq(cmp);
+    // priority_queue para ordenar de mayor a menor por frecuencia
+    std::priority_queue<std::pair<int,std::string>> pq;
+    for (const auto& r : results) {
+        pq.push({r.second, r.first}); // primero frecuencia, luego nombre
+    }
 
-    for (auto& r : result) pq.push(r);
-
+    std::cout << "Top 3 resultados:\n";
     int count = 0;
     while (!pq.empty() && count < 3) {
-        auto top = pq.top(); pq.pop();
-        std::cout << top.first << " (frecuencia: " << top.second << ")\n";
+        auto top = pq.top();
+        pq.pop();
+        std::cout << top.second << " (frecuencia: " << top.first << ")\n";
         count++;
     }
 }
