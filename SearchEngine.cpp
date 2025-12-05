@@ -49,36 +49,49 @@ std::string SearchEngine::CleanWord(const std::string& word) const {
 }
 
 void SearchEngine::search(const std::string& query) {
-    std::istringstream iss(query);
-    std::vector<std::string> tokens;
-    std::string token;
-    while (iss >> token) tokens.push_back(CleanWord(token));
+    std::string w1, w2;
+    bool foundSpace = false;
+
+    // Recorremos cada carácter
+    for (char c : query) {
+        if (c == ' ' && !foundSpace) {
+            foundSpace = true; // encontramos el espacio entre palabras
+            continue;
+        }
+        if (!foundSpace)
+            w1 += c; // construye primera palabra
+        else
+            w2 += c; // construye segunda palabra
+    }
+
+    // Limpiar palabras
+    w1 = CleanWord(w1);
+    w2 = CleanWord(w2);
 
     std::vector<std::pair<std::string,int>> results;
 
-    if (tokens.size() == 1) {
-        std::string w = tokens[0];
-        if (OrderMapStringIndex.find(w) != OrderMapStringIndex.end()) {
-            for (auto& pair : OrderMapStringIndex[w])
-                results.push_back(pair);
+    if (!w1.empty() && w2.empty()) {
+        // Una palabra
+        if (OrderMapStringIndex.find(w1) != OrderMapStringIndex.end()) {
+            for (auto& p : OrderMapStringIndex[w1])
+                results.push_back(p);
         }
-    } else if (tokens.size() == 2) {
-        std::string w1 = tokens[0];
-        std::string w2 = tokens[1];
+    } else if (!w1.empty() && !w2.empty()) {
+        // Dos palabras
         if (OrderMapStringIndex.find(w1) != OrderMapStringIndex.end() &&
             OrderMapStringIndex.find(w2) != OrderMapStringIndex.end()) {
 
-            for (auto& pair1 : OrderMapStringIndex[w1]) {
-                const std::string& filename = pair1.first;
-                int freq1 = pair1.second;
-                if (OrderMapStringIndex[w2].find(filename) != OrderMapStringIndex[w2].end()) {
+            for (auto& p : OrderMapStringIndex[w1]) {
+                const std::string& filename = p.first;
+                int freq1 = p.second;
+                if (OrderMapStringIndex[w2].count(filename)) {
                     int freq2 = OrderMapStringIndex[w2][filename];
                     results.push_back({filename, freq1 + freq2});
                 }
             }
         }
     } else {
-        std::cout << "Máximo 2 palabras en la búsqueda.\n";
+        std::cout << "Consulta vacía.\n";
         return;
     }
 
