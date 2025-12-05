@@ -1,0 +1,4 @@
+Road Rash II
+
+ A motorcycle racing game with major attitude. You race in varying environments across the USA for ever increasing sums of money. With that money you can buy faster and better bikes. There are many objects on the road to watch out for including cars, rocks and signs. If you hit one you'll go flying and lose valuable time. If you crash too often your bike will get wrecked. You can also attack other racers. The default attack is a punch, but some racers have weapons such as whips, chains and clubs, which you can steal and use against them. The police patrol the various courses, so if you're not careful you will get busted. Road Rash II is not just a racing game but also a fighting game.
+

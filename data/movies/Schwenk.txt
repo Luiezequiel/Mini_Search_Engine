@@ -1,0 +1,4 @@
+Schwenk
+
+ A simulated camera movement, an endless pan in single frames over stems and trunks of leafless bushes and trees. Acceleration, multiple exposure and over-painting cause increasing abstraction of the passing landscape to the graphic moment of vertical lines and grids. (Gerald Weber)
+

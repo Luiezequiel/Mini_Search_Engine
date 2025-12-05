@@ -1,0 +1,4 @@
+Tetris
+
+ Differently shaped forms fall down into a 2D container. The forms, which can be moved and rotated, must be sorted in "on-the-fly" on the bottom of the container. Every horizontal line completely built without any space makes you score and disappears. Every once in a while the game fastens. Additional points are given if you don't wait for a form to arrive at the bottom and drop it fast. The game ends if there is no room left in the container.
+

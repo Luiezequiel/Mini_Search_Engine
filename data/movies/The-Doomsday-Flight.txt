@@ -1,0 +1,4 @@
+The Doomsday Flight
+
+ A bomb is planted on board an airplane, with an altitude-sensitive trigger. It will explode when the plane descends through the altitude of 5,000 feet, unless the ransom demanded is paid.
+

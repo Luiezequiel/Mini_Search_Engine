@@ -6,25 +6,25 @@
 #include <queue>
 #include <string>
 #include <vector>
+using namespace std;
+namespace fs = filesystem;
 
-namespace fs = std::filesystem;
-
-void SearchEngine::readFile(const std::string& directory) {
+void SearchEngine::readFile(const string& directory) {
     for (const auto& entry : fs::directory_iterator(directory)) {
         if (!entry.is_regular_file()) continue;
 
-        std::string filename = entry.path().filename().string();
-        std::ifstream ifs(entry.path());
+        string filename = entry.path().filename().string();
+        ifstream ifs(entry.path());
         if (!ifs) continue;
 
-        std::ostringstream ss;
+        ostringstream ss;
         ss << ifs.rdbuf();
-        std::string content = ss.str();
+        string content = ss.str();
 
-        std::istringstream iss(content);
-        std::string word;
+        istringstream iss(content);
+        string word;
         while (iss >> word) {
-            std::string clean = CleanWord(word);
+            string clean = CleanWord(word);
             if (clean.empty()) continue;
             OrderMapString[filename][clean]++;
         }
@@ -33,25 +33,25 @@ void SearchEngine::readFile(const std::string& directory) {
 
 void SearchEngine::buildIndex() {
     for (const auto& file_pair : OrderMapString) {
-        const std::string& filename = file_pair.first;
+        const string& filename = file_pair.first;
         for (const auto& word_pair : file_pair.second) {
-            const std::string& word = word_pair.first;
+            const string& word = word_pair.first;
             int freq = word_pair.second;
             OrderMapStringIndex[word][filename] = freq;
         }
     }
 }
 
-std::string SearchEngine::CleanWord(const std::string& word) const {
-    std::string result;
+std::string SearchEngine::CleanWord(const string& word) const {
+    string result;
     for (char c : word) {
-        if (std::isalnum(c)) result += std::tolower(c);
+        if (isalnum(c)) result += tolower(c);
     }
     return result;
 }
 
-void SearchEngine::search(const std::string& query) {
-    std::string w1, w2;
+void SearchEngine::search(const string& query) {
+    string w1, w2;
     bool foundSpace = false;
 
     // Recorremos cada carácter
@@ -70,7 +70,7 @@ void SearchEngine::search(const std::string& query) {
     w1 = CleanWord(w1);
     w2 = CleanWord(w2);
 
-    std::vector<std::pair<std::string,int>> results;
+    vector<pair<string,int>> results;
 
     if (!w1.empty() && w2.empty()) {
         // Una palabra
@@ -84,7 +84,7 @@ void SearchEngine::search(const std::string& query) {
             OrderMapStringIndex.find(w2) != OrderMapStringIndex.end()) {
 
             for (auto& p : OrderMapStringIndex[w1]) {
-                const std::string& filename = p.first;
+                const string& filename = p.first;
                 int freq1 = p.second;
                 if (OrderMapStringIndex[w2].count(filename)) {
                     int freq2 = OrderMapStringIndex[w2][filename];
@@ -101,24 +101,24 @@ void SearchEngine::search(const std::string& query) {
 }
 
 
-void SearchEngine::displayTopResult(const std::vector<std::pair<std::string,int>>& results) {
+void SearchEngine::displayTopResult(const vector<pair<string,int>>& results) {
     if (results.empty()) {
-        std::cout << "No se encontraron resultados.\n";
+        cout << "No se encontraron resultados.\n";
         return;
     }
 
     // priority_queue para ordenar de mayor a menor por frecuencia
-    std::priority_queue<std::pair<int,std::string>> pq;
+    priority_queue<pair<int,string>> pq;
     for (const auto& r : results) {
         pq.push({r.second, r.first}); // primero frecuencia, luego nombre
     }
 
-    std::cout << "Top 3 resultados:\n";
+    cout << "Top 3 resultados:\n";
     int count = 0;
     while (!pq.empty() && count < 3) {
         auto top = pq.top();
         pq.pop();
-        std::cout << top.second << " (frecuencia: " << top.first << ")\n";
+        cout << top.second << " (frecuencia: " << top.first << ")\n";
         count++;
     }
 }

@@ -1,0 +1,4 @@
+The KGB, the Computer and Me
+
+ In 1986, astronomer turned computer scientist Clifford Stoll had just started working on a computer system at the Lawrence Berkeley Laboratory when he noticed a 75-cent discrepancy between the charges printed by two accounting programs responsible for charging people for machine use. Intrigued, he deduced that the system was being hacked, and he determined to find the culprit. This is the re-enactment of how he tracked down KGB cracker Markus Hess through the Ethernet to Hannover, Germany, as is told in his best-selling book _ The Cuckoo's Egg Maze of Computer Espionage_ (1989). Stoll has become a celebrity for being, as he terms himself, "a computer contrarian."
+

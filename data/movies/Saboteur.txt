@@ -1,0 +1,4 @@
+Saboteur
+
+ Saboteur combines platform, beat 'em up and adventure elements, your character is a lone samurai trying to infiltrate an enemy industrial complex. You are capable of all manner of ninja-style moves including kicks and punches, as well as using weaponry. You must travel through an underground system of tunnels linked mainly by platforms, ladders and subway trams before triggering a bomb and escaping. Your energy recharges if you stay still, so finding areas free of guards and dogs is useful, especially as you only have one life. There's plenty of object manipulation involved, although only one item can ever be carried at a time.
+

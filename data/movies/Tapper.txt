@@ -1,0 +1,4 @@
+Tapper
+
+ You are a bartender serving Budweiser beer to patrons. You must serve everyone a beer before they work their way up to the kegs. You must also grab empty mugs before they slide off the end of the bar. Extra points for collecting tips. Bonus rounds involve locating the one beer that has not been shaken, and serving it.
+

@@ -1,0 +1,4 @@
+The Curse of Monkey Island
+
+ Third Computer Adventure based on LucasArts famous comedy "Monkey Island" series. After escaping from the voodoo Amusement Park, very young pirate Guybrush Threepwood meets with both his true love, Governor Elaine Marley and his arch-enemy the zombie un-dead pirate LeChuck. Defeating LeChuck (again) Guybrush asks Elaine to marry him but Guybrush uses a cursed diamond ring from LeChuck's treasure, turning the furious Elaine into pure gold. Guybrush must set out to settle an old legacy, meet some old/new friends as well as trying to reverse the curse. However, LeChuck, still obsessed with marrying Elaine managed to re-create himself and has big plans for both Elaine and for Guybrush...
+

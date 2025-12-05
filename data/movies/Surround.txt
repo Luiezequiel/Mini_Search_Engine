@@ -1,0 +1,4 @@
+Surround
+
+ The same concept as the game "Snake" around the screen with a tail on it, and you try not to run into the screen border or your tail. With the 2-player option, you can try to block and trap your opponent with your tail. Game levels 13-14 are called "Video Graffiti" and allow you to draw or write on your TV screen, without any game objective. Simple colors and sounds--a very rudimentary home videogame.
+
