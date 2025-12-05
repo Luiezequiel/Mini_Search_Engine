@@ -4,9 +4,6 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include <queue>
-#include <cctype>
-#include <algorithm>
 
 using namespace std;
 
@@ -14,7 +11,7 @@ class SearchEngine {
 public:
     SearchEngine() = default;
 
-    // Lee todos los archivos del directorio, tokeniza y cuenta palabras
+    // Lee todos los archivos del directorio y cuenta palabras
     void readFile(const string& directory);
 
     // Construye el índice invertido usando los datos leídos
@@ -26,7 +23,7 @@ public:
     // Busca la consulta del usuario (1 o 2 palabras)
     void search(const string& query);
 
-    // Muestra los 3 resultados más relevantes
+    // Muestra los 3 resultados 
     void displayTopResult(const vector<pair<string,int>>& result);
 
 private:
