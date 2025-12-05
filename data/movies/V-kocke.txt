@@ -1,0 +1,4 @@
+V kocke
+
+ A character is inside a cubical room; there is a hole in the roof, which is too high to reach. But pushing on the walls distorts the room in various ways, always appearing to bring the hole closer while still leaving it tantalizingly inaccessible.
+

@@ -1,0 +1,4 @@
+SLIC
+
+ The composite Super Lightweight Interchangeable Carrier (SLIC) is a new breed of equipment carrier that will allow the Space Shuttle to transport a full complement of scientific instruments and other components to Hubble. Made of carbon fiber with a cyanate ester resin and a titanium metal matrix composite, SLIC is the first all-composite carrier to fly on the shuttle. This flat, reusable pallet looks very different from the carriers flown on previous Hubble servicing missions because of its efficient design. This design, plus SLIC's composite construction, makes it much lighter and stronger than traditional aluminum carriers. About half the weight of its predecessors, SLIC shows a dramatic increase in performance over other Hubble equipment carriers, with nearly double the carrying capability.
+

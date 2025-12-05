@@ -1,0 +1,4 @@
+Tx-transform
+
+ Tx-transform is a new film technique that transposes the time axis (t) and the space axis (x) with one another in film. Normally, each individual frame of film depicts the entire space but only a moment in time (1/24 second). With tx-transformed films, it is just the opposite shows the entire time but only a tiny portion of space (the left side of the picture is "before,^Ô the right side is "after^Ô).
+

@@ -1,0 +1,4 @@
+Resonance
+
+ A a system to oscillate with larger amplitude at some frequencies than at others. These are known as the system's resonant frequencies. At these frequencies, even small periodic driving forces can produce large amplitude oscillations, because the system stores vibrational energy.
+

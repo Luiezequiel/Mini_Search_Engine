@@ -1,0 +1,4 @@
+The Famous Five
+
+ Enid Blyton's first Famous Five novel comes to life in this adventure game of the jolly adventures on mysterious treasure islands with a group of well-mannered inquisitive youngsters. The story takes place in and around Aunt Fanny's cottage, a fishing boat, a forest and a courtyard among other locations. This is brought to life as an interactive fiction game using a purely keyboard-driven interface. Descriptions are written in Blytonesque language. You can control any of the four human characters at any time and must often swap between them. The story involves exposing and stopping a band of ruthless smugglers on Kirrin island, which George has made her own private playground.
+

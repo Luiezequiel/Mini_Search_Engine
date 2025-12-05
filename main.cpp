@@ -1,20 +1,22 @@
 #include "SearchEngine.h"
 #include <iostream>
+#include <string>
+using namespace std;
 
 int main() {
     SearchEngine engine;
 
-    std::string directory = "data/movies";
+    string directory = "data/movies";
     engine.readFile(directory);
     engine.buildIndex();
 
-    std::string query;
+    string query;
     while (true) {
-        std::cout << "Ingrese consulta (1 o 2 palabras, 'exit' para salir): ";
-        std::getline(std::cin, query);
+        cout << "Ingrese consulta (1 o 2 palabras, 'exit' para salir): ";
+        getline(std::cin, query);
         if (query == "exit") break;
         engine.search(query);
     }
 
-    return 0;
+    return 0;
 }

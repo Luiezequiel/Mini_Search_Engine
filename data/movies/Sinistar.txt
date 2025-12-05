@@ -1,0 +1,4 @@
+Sinistar
+
+ A small, triangular fighter ship is maneuvered by the player through a series of "Zones" in the galaxy. The player must blast Sinisite crystals out of planetoids while fending off attacking enemy drones and Warrior ships. Collect enough crystals to destroy the evil Sinistar before he kills you.
+

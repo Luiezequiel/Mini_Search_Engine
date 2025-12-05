@@ -1,0 +1,4 @@
+Quantus
+
+ Quantus examines the idea of quantification as exemplified by Pythagoras' motto "all is number". The vehicle for demonstrating this omnipresence of numbers and mathematics is computer graphics. By observing how computer animators are able to quantify seemingly un-mathematical phenomena such as light, color, and movement, Quantus provides a springboard for seeing this quantification in the real world.
+

@@ -1,0 +1,4 @@
+Storm P. Opfindelser
+
+ This puppet film recreates some of Danish humorist Storm P.'s popular cartoons - the so-called "inventions". A "Storm P. Invention" is how Danes would describe a highly complicated technical design. The design of these apparatuses reflects an original satirical view on a society obsessed by efficiency and technocratization. The fun is derived from the lack of proportion between the diminutive scale of the problem and incomprehensible complexity of Storm P.'s solution.
+

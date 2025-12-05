@@ -1,0 +1,4 @@
+Root Explorations
+
+ This project is an exploration of relationships between natural forms and 3D-modeled imagery. It involved the digitizing of a tree root structure in the field. The resulting 3D form was modified, animated and composited to create a virtual tour of an often overlooked natural structure.
+
