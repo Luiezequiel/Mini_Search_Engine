@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     SearchEngine engine;
-
+#
     string directory = "data/movies";
     engine.readFile(directory);
     engine.buildIndex();
