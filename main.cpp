@@ -16,5 +16,5 @@ int main() {
         engine.search(query);
     }
 
-    return 0;
+    return 0;
 }
